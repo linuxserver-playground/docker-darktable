@@ -8,9 +8,9 @@ summary: |-
 upstream:
   url: https://www.darktable.org/
   version:
-    type: command
-    run: |-
-      curl -sL https://archlinux.org/packages/extra/x86_64/darktable/ |awk -F'(<h2>darktable |</h2>)' '/<h2>/ {print $2}'
+    type: arch_package
+    package: darktable
+    release: true
 
 release:
   branch: master
