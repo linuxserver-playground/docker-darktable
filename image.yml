@@ -11,6 +11,13 @@ upstream:
     type: arch_package
     package: darktable
     release: true
+  notes:
+    type: github_release
+    repo: darktable-org/darktable
+    tag: release-${VERSION}
+    transform:
+    - regex: -\d+$
+      replace: ''
 
 release:
   branch: master
